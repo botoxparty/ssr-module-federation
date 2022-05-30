@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "yarn build && yarn serve",
+    "build": "yarn workspaces run build",
+    "serve": "yarn workspaces run serve",
+    "clean": "yarn workspaces run"
+  },
+  "workspaces": [
+    "remote1",
+    "shell"
+  ]
+}
