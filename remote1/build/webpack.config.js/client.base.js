@@ -5,8 +5,6 @@ const ModuleFederationPlugin = require("webpack").container
 const { client: clientLoaders } = require("./loaders");
 const plugins = require("./plugins");
 const common = require("./common.base");
-const FederationModuleIdPlugin = require("webpack-federation-module-id-plugin");
-const FederationStatsPlugin = require("webpack-federation-stats-plugin");
 
 module.exports = merge(common, {
   name: "client",
@@ -20,8 +18,6 @@ module.exports = merge(common, {
   },
   plugins: [
     ...plugins.client,
-    new FederationStatsPlugin(),
-    new FederationModuleIdPlugin(),
     new ModuleFederationPlugin({
       name: "remote1",
       library: { type: "var", name: "remote1" },
