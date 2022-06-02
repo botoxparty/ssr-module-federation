@@ -12,13 +12,13 @@ if (fs.existsSync(dotenvFile)) {
 module.exports = {
   dotenv: path.resolve(__dirname, "../.env"),
   development: {
-    clientPath: path.resolve(__dirname, "../buildClient"),
-    serverPath: path.resolve(__dirname, "../buildServer"),
+    clientPath: path.resolve(__dirname, "../dist/client"),
+    serverPath: path.resolve(__dirname, "../dist/server"),
     publicPath: "/static/",
   },
   production: {
-    clientPath: path.resolve(__dirname, "../buildClient"),
-    serverPath: path.resolve(__dirname, "../buildServer"),
+    clientPath: path.resolve(__dirname, "../dist/client"),
+    serverPath: path.resolve(__dirname, "../dist/server"),
     publicPath: "/static/",
   },
 };

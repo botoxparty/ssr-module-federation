@@ -3,6 +3,7 @@
   "ignore": [
     "./buildServer",
     "./buildClient",
+    "dist/*",
     "buildServer/*",
     "buildClient/*",
     "node_modules/*",

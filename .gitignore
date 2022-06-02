@@ -1,3 +1,4 @@
 buildClient/
 buildServer/
 node_modules/
+dist/
