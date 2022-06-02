@@ -11,7 +11,7 @@ module.exports = merge(common, {
   target: "web",
   entry: ["@babel/polyfill", path.resolve(__dirname, "../../src/index.js")],
   output: {
-    publicPath: "http://localhost:3001/static/",
+    publicPath: "http://localhost:3000/static/",
   },
   module: {
     rules: clientLoaders,
@@ -22,7 +22,7 @@ module.exports = merge(common, {
       name: "shell",
       filename: "container.js",
       remotes: {
-        remote1: "remote1@http://localhost:3002/static/container.js",
+        remote1: "remote1@http://localhost:3001/static/container.js",
       },
       shared: [{"react":deps.react, "react-dom":deps["react-dom"]}],
     }),

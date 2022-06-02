@@ -16,7 +16,7 @@ const done = () => {
   runningServer = app.listen(env.PORT, () => {
     console.info(
       `[${new Date().toISOString()}]`,
-      `App is running: 🌎 http://localhost:${env.PORT}`,
+      `Shell App is running: 🌎 http://localhost:${env.PORT}`,
     );
   });
 };

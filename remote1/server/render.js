@@ -18,7 +18,7 @@ export default async (req, res, next) => {
   
    <body ${helmet.bodyAttributes.toString()}>
      <div id="root">${html}</div>
-      <script async="" data-chunk="main" src="http://localhost:3002/static/main.js"></script>
+      <script async="" data-chunk="main" src="http://localhost:3001/static/main.js"></script>
    </body>
  </html>`);
 };

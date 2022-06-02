@@ -24,7 +24,7 @@ export default async (req, res, next) => {
       res.write(`<div id="root">`);
       stream.pipe(res);
       res.write(`</div>`);
-      res.write(`<script async="" data-chunk="main" src="http://localhost:3001/static/main.js"></script>`);
+      res.write(`<script async="" data-chunk="main" src="http://localhost:3000/static/main.js"></script>`);
       res.write(`</body></html>`);
     },
     onShellError() {

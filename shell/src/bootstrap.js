@@ -6,11 +6,10 @@ import App from './components/App';
 const render = App => {
   const root = document.getElementById('root');
 
-  ReactDOMClient.hydrateRoot(
+  ReactDOMClient.hydrateRoot(root,
     <AppContainer>
       <App />
     </AppContainer>,
-    root,
   );
 };
 

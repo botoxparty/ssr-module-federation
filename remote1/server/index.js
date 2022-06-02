@@ -14,7 +14,7 @@ const done = () => {
   app.listen(env.PORT, () => {
     console.info(
       `[${new Date().toISOString()}]`,
-      chalk.blue(`App is running: 🌎 http://localhost:${env.PORT}`),
+      `App is running: 🌎 http://localhost:${env.PORT}`,
     );
   });
 };
