@@ -24,6 +24,7 @@ module.exports =  {
     server: new ModuleFederationPlugin({
         name: "remote2",
         filename: "remoteEntry.js",
+        library: { type: "commonjs2" },
         remotes: {},
         exposes: {
             './Image': './src/Image'

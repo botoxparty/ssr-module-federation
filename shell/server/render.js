@@ -2,7 +2,6 @@ import React from 'react';
 import { renderToPipeableStream } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import App from '../src/components/App';
-import SomeComponent from 'remote1/SomeComponent';
 
 export default async (req, res, next) => {
   const helmet = Helmet.renderStatic();
@@ -31,7 +30,7 @@ export default async (req, res, next) => {
       res.statusCode = 500;
       res.send(`<h1>An error occurred</h1>`)
     },
-    onError() {
+    onError(err) {
       didError = true;
       console.error(err);
     }

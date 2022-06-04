@@ -12,7 +12,7 @@ const config = require("../config");
 const { serverPath } = config[process.env.NODE_ENV || "development"];
 const remotePath = path.resolve(
     __dirname,
-    "../../../remote1/buildServer/container.js"
+    "../../../remote1/dist/server/remoteEntry.js"
 )
 const deps = require('../../package.json').dependencies
 
@@ -38,13 +38,13 @@ module.exports = merge(common, {
     new ModuleFederationPlugin({
       name: "shell",
       library: { type: "commonjs2" },
-      filename: "container.js",
+      filename: "remoteEntry.js",
       remotes: {
-        remote1: remotePath
-        // remote1: {
-        //   // we dont need to do this, just intersting to see in action
-        //   external: `promise new Promise((resolve)=>{ console.log('requring remote');delete require.cache['${remotePath}']; resolve(require('${remotePath}')) })`
-        // },
+        // remote1: remotePath
+        remote1: {
+          // we dont need to do this, just intersting to see in action
+          external: `promise new Promise((resolve)=>{ console.log('requring remote, ${remotePath}');delete require.cache['${remotePath}']; resolve(require('${remotePath}')) })`
+        },
       },
       shared: [{"react":deps.react, "react-dom":deps["react-dom"]}],
     }),

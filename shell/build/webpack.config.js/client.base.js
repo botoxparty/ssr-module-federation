@@ -22,7 +22,7 @@ module.exports = merge(common, {
       name: "shell",
       filename: "container.js",
       remotes: {
-        remote1: "remote1@http://localhost:3001/static/container.js",
+        remote1: "remote1@http://localhost:3001/client/remoteEntry.js",
       },
       shared: [{"react":deps.react, "react-dom":deps["react-dom"]}],
     }),

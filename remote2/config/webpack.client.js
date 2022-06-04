@@ -7,7 +7,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = merge(sharedWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../dist/client"),
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3002/client/",
   },
   devServer: {
     port: 3002,
