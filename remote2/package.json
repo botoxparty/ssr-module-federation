@@ -1,17 +1,19 @@
 {
-  "name": "remote2",
+  "name": "@server-side-rendering/remote2",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "yarn build:client && yarn build:server",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=3002 npx serve",
+    "build:client": "webpack --mode production --config config/webpack.client.js",
+    "build:server": "webpack --mode production --config config/webpack.server.js",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+    "name": "Adam Hammad",
+    "email": "mail@adamham.dev"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -27,11 +29,12 @@
     "style-loader": "^3.3.0",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.9.0",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }
