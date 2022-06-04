@@ -1,8 +1,8 @@
 import React from "react";
 
-export default Remote2 = () => (
+export default Content = () => (
     <div className="container">
-      <div>Name: remote2</div>
+      <div>Name: remote1</div>
       <div>Framework: react</div>
       <div>Language: JavaScript</div>
       <div>CSS: Empty CSS</div>

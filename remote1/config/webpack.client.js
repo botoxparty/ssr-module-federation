@@ -1,16 +1,16 @@
 const path = require("path");
-const webpackMerge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const sharedWebpackConfig = require("./webpack.shared");
 const moduleFederationPlugin = require("./module-federation");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-module.exports = webpackMerge(sharedWebpackConfig, {
+module.exports = merge(sharedWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../dist/client"),
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3001/",
   },
   devServer: {
-    port: 3002,
+    port: 3001,
     historyApiFallback: true,
   },
   plugins: [

@@ -1,9 +1,9 @@
 const path = require("path");
-const webpackMerge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const sharedWebpackConfig = require("./webpack.shared");
 const moduleFederationPlugin = require("./module-federation");
 
-module.exports = webpackMerge(sharedWebpackConfig, {
+module.exports = merge(sharedWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../dist/server"),
     filename: "[name].js",

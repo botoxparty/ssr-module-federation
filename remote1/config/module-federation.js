@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports =  {
     client: new ModuleFederationPlugin({
-        name: "remote2",
+        name: "remote1",
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
@@ -22,7 +22,7 @@ module.exports =  {
         },
     }),
     server: new ModuleFederationPlugin({
-        name: "remote2",
+        name: "remote1",
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {

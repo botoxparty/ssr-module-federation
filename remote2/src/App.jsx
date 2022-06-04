@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Content from "./Content";
+import Image from "./Image";
 
 import "./index.css";
 
-const App = () => <Content />;
+const App = () => <Image />;
 
 ReactDOM.render(<App />, document.getElementById("app"));

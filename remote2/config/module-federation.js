@@ -7,7 +7,7 @@ module.exports =  {
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-            './Content': './src/Content'
+            './Image': './src/Image'
         },
         shared: {
             ...deps,
@@ -26,7 +26,7 @@ module.exports =  {
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-            './Content': './src/Content'
+            './Image': './src/Image'
         },
         shared: {
             ...deps,
