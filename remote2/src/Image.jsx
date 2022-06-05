@@ -1,11 +1,13 @@
 import React from "react";
-import "./index.css";
 
 export default () => (
-    <div className="container">
-      <div>Name: remote2</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Empty CSS</div>
-    </div>
-  );
+  <div style={{
+    backgroundColor: 'red',
+    color: 'lightgrey',
+    padding: '1rem',
+    width: '500px'
+  }}>
+    <h2>Remote 2: Image</h2>
+    <img src="https://i.ibb.co/jfTvC6Q/serge.jpg" style={{ width: '100%' }} alt="serge" border="0" />
+  </div>
+);

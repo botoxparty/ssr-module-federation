@@ -17,13 +17,12 @@ export default async (req, res, next) => {
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
         ${helmet.link.toString()}
-        <link rel="shortcut icon" href="data:;base64,=">
       </head>
       <body>`);
       res.write(`<div id="root">`);
       stream.pipe(res);
       res.write(`</div>`);
-      res.write(`<script async="" data-chunk="main" src="http://localhost:3000/static/main.js"></script>`);
+      res.write(`<script async data-chunk="main" src="http://localhost:3000/static/main.js"></script>`);
       res.write(`</body></html>`);
     },
     onShellError() {

@@ -1,0 +1,19 @@
+{
+  "name": "ssr-module-federation",
+  "version": "1.0.0",
+  "description": "Example of server side rendering with module federation using React 18 and Suspense",
+  "main": "index.js",
+  "repository": "git@github.com:botoxparty/ssr-module-federation.git",
+  "author": "Adam Hammad <mail@adamham.dev>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "remote1",
+    "remote2",
+    "shell"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "serve": "yarn workspaces run serve"
+  }
+}

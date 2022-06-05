@@ -2,22 +2,22 @@ const path = require("path");
 const {merge} = require("webpack-merge");
 const ModuleFederationPlugin = require("webpack").container
   .ModuleFederationPlugin;
-const { client: clientLoaders } = require("./loaders");
-const plugins = require("./plugins");
-const common = require("./common.base");
-const deps = require('../../package.json').dependencies
-module.exports = merge(common, {
+const shared = require("./webpack.shared");
+const deps = require('../package.json').dependencies
+
+module.exports = merge(shared, {
   name: "client",
   target: "web",
-  entry: ["@babel/polyfill", path.resolve(__dirname, "../../src/index.js")],
+  entry: ["@babel/polyfill", path.resolve(__dirname, "../src/index.js")],
+  mode: "production",
+  devtool: "source-map",
   output: {
+    path: path.resolve(__dirname, "../dist/client"),
+    filename: "[name].js",
+    chunkFilename: "[name].js",
     publicPath: "http://localhost:3000/static/",
   },
-  module: {
-    rules: clientLoaders,
-  },
   plugins: [
-    ...plugins.client,
     new ModuleFederationPlugin({
       name: "shell",
       filename: "container.js",
