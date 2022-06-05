@@ -1,11 +1,11 @@
 {
   "verbose": true,
   "ignore": [
-    "./buildServer",
-    "./buildClient",
+    "./build/client",
+    "./build/server",
     "dist/*",
-    "buildServer/*",
-    "buildClient/*",
+    "build/server/*",
+    "build/client/*",
     "node_modules/*",
     "**/external.js"
   ]

@@ -2,7 +2,7 @@ const express = require('express');
 const chalk = require('chalk');
 const initMiddleware = require('./middleware');
 
-const { raw: env } = require('../build/env')();
+const { raw: env } = require('../config/env')();
 
 const app = express();
 

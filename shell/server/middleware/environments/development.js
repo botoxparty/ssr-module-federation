@@ -3,8 +3,8 @@ const path = require('path');
 const webpackDevMiddleware = require('webpack-dev-middleware').default;
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
-const clientConfig = require('../../../build/webpack.config.js/client.dev');
-const serverConfig = require('../../../build/webpack.config.js/server.dev');
+const clientConfig = require('../../../config/webpack.config.js/client.dev');
+const serverConfig = require('../../../config/webpack.config.js/server.dev');
 
 module.exports = (express, app, done) => {
   const compiler = webpack([clientConfig, serverConfig]);
