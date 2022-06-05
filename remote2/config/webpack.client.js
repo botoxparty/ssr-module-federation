@@ -9,10 +9,6 @@ module.exports = merge(sharedWebpackConfig, {
     path: path.resolve(__dirname, "../dist/client"),
     publicPath: "http://localhost:3002/client/",
   },
-  devServer: {
-    port: 3002,
-    historyApiFallback: true,
-  },
   plugins: [
     moduleFederationPlugin.client,
     new HtmlWebPackPlugin({

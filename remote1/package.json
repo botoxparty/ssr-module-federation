@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "build": "yarn build:client && yarn build:server",
-    "build:dev": "webpack --mode development",
     "build:client": "webpack --mode production --config config/webpack.client.js",
     "build:server": "webpack --mode production --config config/webpack.server.js",
     "serve": "npx serve dist/ -p 3001",
-    "start": "webpack serve --open --mode development",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start": "yarn build && yarn serve"
   },
   "license": "MIT",
   "author": {
@@ -22,11 +20,7 @@
     "@babel/preset-react": "^7.14.5",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
-    "css-loader": "^6.3.0",
-    "html-webpack-plugin": "^5.3.2",
-    "postcss": "^8.2.1",
-    "postcss-loader": "^4.1.0",
-    "style-loader": "^3.3.0",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",
